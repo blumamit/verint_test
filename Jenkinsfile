@@ -20,6 +20,7 @@ node{
         echo "Execute the script:"
         sh 'chmod 755 forcast_json_parser.sh'
         sh './forcast_json_parser.sh'
+        cat './forcast_data.json'
     }
 
     stage('Validate the json file'){
