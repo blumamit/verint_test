@@ -9,6 +9,8 @@ I have only limited experience with Python, but I started off reading about pars
 With Bash, I began by downloading the webpage using "curl" to send out an HTTP GET request on the page.
 Then, with some help of the object inspector (chrome or firefox dev tools) I was able to parse out the required information by using a mixture Bash text processing tools, and in particular by using Regexs with techniques like forward and backward lookup.
 
+Then, it's just a matter of "pasting" all the information in the correct order and format into a json file.
+
 Once i had my json parser up and running and the md5sum file uploaded to the repo, I started working on the jenkins file, which was a bit more challenging for me.
 
 ## 2. Installing jenkins:
