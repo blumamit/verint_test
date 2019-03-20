@@ -27,7 +27,7 @@ node{
 
     stage('Validate the json file'){
 //      To fail the json validation pollute the json file by uncommenting the next line
-//        sh 'echo , >> ${WORKSPACE}/forcast_data.json'
+//        sh 'echo , >> ./forcast_data.json'
         def jsonString = new File("${WORKSPACE}/forcast_data.json").getText('UTF-8')
         ObjectMapper mapper = new ObjectMapper()
         mapper.configure(DeserializationFeature.FAIL_ON_TRAILING_TOKENS, true)
