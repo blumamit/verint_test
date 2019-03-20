@@ -28,11 +28,11 @@ I opted for a scripted pipline (rather than a declarative one), because it feels
 
 ## 3. Stage "Checkout":
 
-I used the syntax that was directly given from the built-in web documentation http:JENKINS_IP:8080/job/test/pipeline-syntax/ when picking the "Checkout: Check out from version control" Sample steps.
+I used the syntax that was directly given from the built-in web documentation http://JENKINS_IP:8080/job/test/pipeline-syntax/ when picking the "Checkout: Check out from version control" Sample steps.
 
 I chose the step, selected "Git" scm, and entered my repo URL - and voila I had my checkout syntax ready to be copy-pasted.
 
-## 4 Stage "Verify checksum":
+## 4. Stage "Verify checksum":
 
 I looked around a bit and other than some built-in fingerprinting features in Jenkins (that I did not know how to use in this context) I couldn't find any helpful groovy libraries for this. So I opted to compare via bash cli, and fail on wrong md5
 
