@@ -21,7 +21,7 @@ node{
         sh './forcast_json_parser.sh'
     }
     stage('Validate the json file'){
-//      to check if json validation (next stage) works uncomment next line
+//      To fail the json validation pollute the json file by uncommenting the next line
 //        sh 'echo , >> ${WORKSPACE}/forcast_data.json'
         def jsonString = new File("${WORKSPACE}/forcast_data.json").getText('UTF-8')
         ObjectMapper mapper = new ObjectMapper()
