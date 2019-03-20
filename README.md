@@ -4,7 +4,7 @@
 
 ## 1. Json parser:
 
-I have only limited experience with Python, but I started off reading about parsing text files and jsons with it. While it didn't seem too complex - the massive slew of various objects and tools available, and my lack of knowledge of the differences between them pushed me to default back to bash which I feel much more comfortable performing text processing and manipulation with. I decided this mainly because I was afraid I might not have enough time to do this *properly* with Python. 
+I have only limited experience with Python, but I started off reading about parsing text files and jsons with it. While it didn't seem too complex - the massive slew of various objects and tools available, and my lack of experience with any of them pushed me to default back to Bash - which I feel much more comfortable performing text processing and manipulation with. I decided this mainly because I was afraid I might not have enough time to do this *properly* with Python - and the code will be poor. 
 
 With Bash, I began by downloading the webpage using "curl" to send out an HTTP GET request on the page.
 Then, with some help of the object inspector (chrome or firefox dev tools) I was able to parse out the required information by using a mixture Bash text processing tools, and in particular by using Regexs with techniques like forward and backward lookup.
@@ -39,7 +39,7 @@ Very straight forward. Give the file permissions and execute the script. Nothing
 
 ## 6. Stage "Validate the json file":
 
-This is where things got a little tricky. I played around with jsonSlurper library quite a bi - but ended up wasting my time in finding out that validation is lacking in this json parsing library in many cases. I eventually stumbled upon this golden post in stackoverflow which compared a few json parsers in groovy:
+This is where things got a little tricky. I played around with jsonSlurper library quite a bit - but ended up wasting my time in finding out that validation is lacking in this json parsing library in many cases. I eventually stumbled upon this golden post in stackoverflow which compared a few json parsers in groovy:
 https://stackoverflow.com/questions/48469200/groovy-validate-json-string
 
-The winner was ObjectMapper - which is what I chose to use. If parsing fails (because of invalid json) the build fails - as required.
+The winner was by far ObjectMapper - which I subsequently chose to use. If parsing fails (because of invalid json) the build fails - as required.
