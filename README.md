@@ -26,7 +26,7 @@ I opted for a scripted pipline (rather than a declarative one), because it feels
 
 ## 3. Stage "Checkout":
 
-I used the syntax that was directly given from https:JENKINS_IP:8080/job/test/pipeline-syntax/ when picking the "Checkout: Check out from version control" Sample steps.
+I used the syntax that was directly given from the built-in web documentation http:JENKINS_IP:8080/job/test/pipeline-syntax/ when picking the "Checkout: Check out from version control" Sample steps.
 
 I chose the step, selected "Git" scm, and entered my repo URL - and voila I had my checkout syntax ready to be copy-pasted.
 
