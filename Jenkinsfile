@@ -13,6 +13,8 @@ node{
     stage('verify checksum'){
         fileCalculatedMD5 = sh(script: 'md5sum forcast_json_parser.sh | cut -d" " -f1', returnStdout: true).trim()
         fileExpectedMD5 = sh(script: 'cat forcast_json_parser.sh_md5sum.txt', returnStdout: true).trim()
+//      To fail the checksum verification pollute one of the md5sum variables by uncommenting the next line:
+//        fileExpectedMD5 = "not the real checksum"
         assert fileCalculatedMD5.equals(fileExpectedMD5)
     }
 
