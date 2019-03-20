@@ -57,7 +57,7 @@ echo '}' >> forcast_data.json
 #echo '{' > forcast_data.json
 #paste -d' ' time.txt description.txt temp.txt feels.txt percip.txt humidity.txt wind.txt >> forcast_data.json
 ## remove last comma sign
-#sed '$s/,//' forcast_data.json
+#sed -i '$ s/,$//' forcast_data.json
 #echo '}' >> forcast_data.json
 
 
