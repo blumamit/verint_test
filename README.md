@@ -1,6 +1,4 @@
-# verint_test
-
-# How I solved this:
+# Weather json parser - how I solved the exam:
 
 ## 1. Json parser:
 
